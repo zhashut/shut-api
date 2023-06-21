@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "com.shut.shutapigateway.proto";
+option java_multiple_files = true;
+option java_outer_classname = "shutApiProto";
+option objc_class_prefix = "HLW";
+
+service shutApi {
+  rpc GetSecretKey(Request) returns (Response) {}
+}
+
+message Request {
+  string requestData = 1;
+}
+
+message Response {
+  string responseData = 1;
+}
